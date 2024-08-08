@@ -1,0 +1,5 @@
+homepage: "https://github.com/Anuj20/httpRequest"
+documentation: "https://github.com/Anuj20/httpRequest/blob/main/README.md"
+versions:
+  - sha: fdb2cea4aab7de4a79238ab7b6808797c538dc46
+    changeNotes: Initial Release
