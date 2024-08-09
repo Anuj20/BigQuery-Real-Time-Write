@@ -1,7 +1,7 @@
 homepage: "https://github.com/Anuj20/BigQuery-Real-Time-Write"
 documentation: "https://github.com/Anuj20/BigQuery-Real-Time-Write/blob/main/README.md"
 versions:
-  - sha:
+  - sha: d3b976250865852bf303371046398a13e9ab0ad2
     changeNotes: reupload with T&C agreement
   - sha: 6d034883db51f1403ed6e2ad434410877b7592fd
     changeNotes: Added more logging commands
