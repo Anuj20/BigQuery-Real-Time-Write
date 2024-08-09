@@ -1,12 +1,4 @@
-﻿___TERMS_OF_SERVICE___
-
-By creating or modifying this file you agree to Google Tag Manager's Community
-Template Gallery Developer Terms of Service available at
-https://developers.google.com/tag-manager/gallery-tos (or such other URL as
-Google may provide), as modified from time to time.
-
-
-___INFO___
+﻿___INFO___
 
 {
   "type": "TAG",
@@ -17,7 +9,7 @@ ___INFO___
   ],
   "version": 1,
   "securityGroups": [],
-  "displayName": "BigQuery Real-Time Write",
+  "displayName": "Insert Data BigQuery Real-Time",
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
@@ -71,13 +63,13 @@ ___TEMPLATE_PARAMETERS___
     "simpleTableColumns": [
       {
         "defaultValue": "",
-        "displayName": "Enter Column Name",
+        "displayName": "Add Column",
         "name": "columnName",
         "type": "TEXT"
       },
       {
         "defaultValue": "",
-        "displayName": "Add Column Value",
+        "displayName": "Add Value",
         "name": "columnValue",
         "type": "TEXT"
       }
@@ -111,12 +103,11 @@ const options = {
   skipInvalidRows: false,
 };
 
-// Add the event callback to the container instance
 addEventCallback((containerId, eventData) => {
   
   let writeData = {};
   
- //log(data.bigQueryData);
+ log(data.bigQueryData);
 if (data.bigQueryData && data.bigQueryData.length) {
   for (let i = 0; i < data.bigQueryData.length; i += 1) {
     const elem = data.bigQueryData[i];
@@ -146,7 +137,7 @@ const rows = [writeData];
     log('BigQuery Success');
   }, (errors) => {
     log('BigQuery Failure');
-//    log(JSON.stringify(errors));
+    log(JSON.stringify(errors));
   });
 });
 
@@ -296,10 +287,7 @@ ___SERVER_PERMISSIONS___
 
 ___TESTS___
 
-scenarios:
-- name: Quick Test
-  code: runCode();
-setup: ''
+scenarios: []
 
 
 ___NOTES___
